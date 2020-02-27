@@ -1,6 +1,7 @@
 import React from 'react';
+import ProfilesTable from './ProfilesTable/ProfilesTable';
 
-const App = () => 
-  <h1>Hi test</h1>
+const App = () =>
+  <ProfilesTable />
 
 export default App;
