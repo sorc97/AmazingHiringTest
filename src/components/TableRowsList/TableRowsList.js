@@ -5,7 +5,8 @@ const TableRowsList = ({ profilesList = [] }) =>
   <tbody>
     {
       profilesList.map(
-        (profile, i) => <TableRow key={i} profileValues={profile} />
+        (profile, i) => 
+          <TableRow key={i} profileValues={profile} />
       )
     }
   </tbody>

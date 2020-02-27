@@ -3,7 +3,9 @@ import profiles from '../../data/profiles.json';
 import TableCaptions from './TableCaptions';
 import { changeSort } from '../../actions/sortActions';
 
-const mapStateToProps = state => {
+const mapStateToProps = ({
+  sort: { currentField: sortField, value: sortValue } 
+}) => {
   const parsedProfiles = profiles;
   const currentCaptions = new Set();
 
@@ -14,7 +16,9 @@ const mapStateToProps = state => {
   });
 
   return {
-    currentCaptions: [...currentCaptions]
+    currentCaptions: [...currentCaptions],
+    sortField,
+    sortValue
   }
 }
 

@@ -2,18 +2,19 @@ const sortReducer = (
   state = {}, action
 ) => {
   const currentField = action.sortField;
-  console.log(currentField);
   
   switch (action.type) {
     case "CHANGE_SORT": {
-      if (state.currentField) {
+      if (state.currentField === currentField) {
         return {
-          [currentField]: (state.currentField === 'low') ? 'high' : 'low'
+          currentField,
+          value: (state.value === 'low') ? 'high' : 'low'
         }
       }
 
       return {
-        [currentField]: 'low'
+        currentField,
+        value: 'low'
       }
     }
 
