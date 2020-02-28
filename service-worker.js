@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/AmazingHiringTest/precache-manifest.c930ab933189061859f969881058d7d6.js"
+  "/AmazingHiringTest/precache-manifest.7c083cc440abe658e8cc32d59b108432.js"
 );
 
 self.addEventListener('message', (event) => {
