@@ -10,7 +10,7 @@
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },
-  "homepage": "https://sorc97.github.io/AmazingHiringTest/",
+  "homepage": "http://sorc97.github.io/AmazingHiringTest/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
