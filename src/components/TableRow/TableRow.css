@@ -1,0 +1,16 @@
+td, th {
+  border: 1px solid rgba(0, 0, 0, 0.205);
+}
+
+td {
+  padding: 15px;
+  color: rgb(51, 47, 47);
+}
+
+tr {
+  transition: .3s;
+}
+
+tr:hover {
+  background-color: rgb(243, 243, 243);
+}

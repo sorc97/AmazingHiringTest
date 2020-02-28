@@ -3,8 +3,9 @@ import rootReducer from './reducers/rootReducer';
 
 const store = createStore(rootReducer);
 
-console.log(store.getState());
-
-store.subscribe(() => console.log(store.getState()));
+store.subscribe(() => {
+  const currentSort = JSON.stringify(store.getState().sort);
+  localStorage['profiles-sort'] = currentSort;
+});
 
 export default store;

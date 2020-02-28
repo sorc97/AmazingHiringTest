@@ -1,5 +1,10 @@
+// Get initial sort value
+const initialSort = (localStorage['profiles-sort']) ?
+  JSON.parse(localStorage['profiles-sort']) :
+  {}
+
 const sortReducer = (
-  state = {}, action
+  state = initialSort, action
 ) => {
   const currentField = action.sortField;
   

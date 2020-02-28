@@ -4,16 +4,14 @@ import TableCaptions from './TableCaptions';
 import { changeSort } from '../../actions/sortActions';
 
 const mapStateToProps = ({
-  sort: { currentField: sortField, value: sortValue } 
+  sort: { currentField: sortField, value: sortValue }
 }) => {
-  const parsedProfiles = profiles;
   const currentCaptions = new Set();
 
-  parsedProfiles.forEach(profile => {
-    Object.keys(profile).forEach(
-      caption => currentCaptions.add(caption)
-    );
-  });
+  // Get table captions by first profiles element
+  Object.keys(profiles[0]).forEach(
+    caption => currentCaptions.add(caption)
+  );
 
   return {
     currentCaptions: [...currentCaptions],

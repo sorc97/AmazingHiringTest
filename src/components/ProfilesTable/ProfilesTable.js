@@ -1,11 +1,12 @@
 import React from 'react';
 import TableCaptionsContainer from '../TableCaptions/TableCaptionsContainer';
 import TableRowsListContainer from '../TableRowsList/TableRowsListContainer';
+import './ProfilesTable.css';
 
-const ProfileTable = () =>
+const ProfilesTable = () =>
   <table>
     <TableCaptionsContainer />
     <TableRowsListContainer />
   </table>
 
-export default ProfileTable;
+export default ProfilesTable;

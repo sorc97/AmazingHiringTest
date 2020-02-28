@@ -6,19 +6,20 @@ const mapStateToProps = ({
   sort: { currentField: sortField, value: sortValue } 
 }) => {
 
-  let profilesClone = [...profiles];
+  let profilesArr = [...profiles];  //Create profiles clone
 
   if(sortField) {
+    // Choose sort function
     let sortFunc = (a, b) => (a[sortField].toLowerCase() > b[sortField].toLowerCase()) ? 1: -1;
 
     if(sortValue === 'high') {
       sortFunc = (a, b) => (a[sortField].toLowerCase() < b[sortField].toLowerCase()) ? 1: -1;
     }
 
-    profilesClone.sort(sortFunc)
+    profilesArr.sort(sortFunc);  // Sort profiles by current sort function
   }
 
-  const profilesList = profilesClone.map(
+  const profilesList = profilesArr.map(  // Get profiles data without captions
     item => Object.values(item)
   )
 
@@ -26,6 +27,5 @@ const mapStateToProps = ({
     profilesList
   }
 }
-
 
 export default connect(mapStateToProps)(TableRowsList);

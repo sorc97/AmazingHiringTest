@@ -1,4 +1,5 @@
 import React from 'react';
+import './TableRow.css';
 
 const TableRow = ({ profileValues = [] }) =>
   <tr>
